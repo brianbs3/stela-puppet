@@ -9,7 +9,7 @@ class common{
 
     file { 
         '/etc/hosts':
-        mode => 0644,
+        mode => '0644',
         owner => root,
         group => root,
         source => "puppet:///modules/common/hosts";

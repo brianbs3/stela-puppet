@@ -7,3 +7,8 @@ content  => 'test content',
 node /^reception\d+$/{
   include common
 }
+
+node /^raspberrypi$/ {
+    include stelaweb
+    #include common
+}
