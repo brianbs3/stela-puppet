@@ -14,4 +14,20 @@ class common{
         group => root,
         source => "puppet:///modules/common/hosts";
     }
+
+  user{
+     "bs":
+      ensure => present,
+      gid => "bs",
+      groups => ["sudo"],
+      membership => minimum,
+      shell => "/bin/bash",
+      require => Group["bs"];
+  }
+   group { 
+    "bs":
+      ensure => present,
+      gid => 1005;
+  }
+
 }

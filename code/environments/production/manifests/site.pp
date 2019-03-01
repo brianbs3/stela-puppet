@@ -8,7 +8,13 @@ node /^reception\d+$/{
   include common
 }
 
+node /^stela$/{
+  include common
+  include stelaweb
+}
+
 node /^raspberrypi$/ {
     include stelaweb
+    include reception
     #include common
 }
